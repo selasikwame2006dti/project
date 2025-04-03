@@ -1,4 +1,3 @@
-
 body {
     font-family: sans-serif;
     margin: 0;
@@ -24,18 +23,22 @@ html {
 
 h2 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: #6200EE;
 }
 
 .btn {
     display: inline-block;
-    color: #6200EE;
     
+    color: #03DAC6;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+}
+
+.btn a{
+  text-shadow: 1px 1px 2px inherit;
 }
 
 .btn:hover {
@@ -49,13 +52,16 @@ h2 {
 header {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
+    position: fixed;
+    width: 100%;
+    min-width: 350px;
+    height: auto;
     z-index: 100;
 }
 
 header .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
@@ -64,19 +70,31 @@ header .container {
 .logo {
     color: #6200EE;
     font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    padding: 10px 0;
+    gap: 10px;
+    justify-content: center; 
 }
 
 nav a {
     color: #333;
     text-decoration: none;
-    margin-left: 20px;
+    margin: 5px 0;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: #6200EE;
 }
-
 
 .hero-section {
     background: linear-gradient(135deg, #6200EE, #03DAC6);
@@ -95,10 +113,10 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-
 .about-content {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .profile-img {
@@ -108,7 +126,6 @@ nav a:hover {
     margin-right: 30px;
     object-fit: cover;
 }
-
 
 .project-grid {
     display: grid;
@@ -137,7 +154,6 @@ nav a:hover {
 .project-item h3, .project-item p {
     padding: 20px;
 }
-
 
 .skills-grid {
     display: grid;
@@ -181,45 +197,6 @@ nav a:hover {
     font-size: 1.1rem;
 }
 
-.mmail{
-    color: #03DAC6;
-    text-decoration: none;
-    font-size: medium;
-
-}
-
-
-
-@media (max-width: 768px) {
-    .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 15px;
-    }
-
-    .skill-card {
-        padding: 20px;
-    }
-
-    .skill-icon, .skill-icon-terminal {
-        font-size: 2rem;
-        width: 50px;
-        height: 50px;
-    }
-
-    .skill-card h3 {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 10px;
-    }
-}
-
-
-
 .post-preview {
     background-color: white;
     padding: 20px;
@@ -238,31 +215,8 @@ nav a:hover {
     color: #6200EE;
 }
 
-
-.services-row {
-  background-color: #f0f0f0;
-}
-
-.services-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.service-item {
-  background-color: #6200EE;
-  color: white;
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 20px;
-  transition: transform 0.3s ease;
-}
-
-.service-item:hover {
-    transform: scale(1.1);
-}
 .services-section {
-    background-color: #F0F0F0; 
+    background-color: #F0F0F0;
     padding: 80px 0;
 }
 
@@ -299,104 +253,9 @@ nav a:hover {
 
 .service-card i {
     font-size: 2rem;
-    color: #03DAC6; 
+    color: #03DAC6;
     margin-top: 20px;
 }
-
-
-.Feedbacks{
-    height: auto;
-    width: 100%;
-    min-width: 360px;
-    background-color: #f0f0f0;
-    
-}
-
-
-.comments{
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    flex-wrap: wrap;
-    height: auto;
-   
-    padding-bottom: 2cm;
-    justify-content: center;
-    
-}
-
-.comments-card{
-    width: 250px;
-    height: 300px;
-    border: none;
-    box-shadow: 2px 1px 20px rgb(131, 129, 129);
-    border-radius: 30px 0px 30px 0px;
-    text-align: center; 
-    justify-self: center;
-    border-bottom: 3px solid  #6200EE;
-    transition: 0.3s ease-in-out;
-
-}
-
-.comments-card:hover{
-
-    transform: translateY(-5px);
-  background-color: #6300ee31;
-   
-
-}
-
-
-.comments-text1{
-    font-size: 80px;
-    margin-top: -55px;
-    color: #03DAC6; 
-}
-
-.comment-text2{
-    margin-top: -60px;
-    padding: 2px 0px 0px 5px;
-   
-}
-
-.comments-card h6{
-    color: #33333396;
-    margin-top: -10px;
-
-}
-
-.proff{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    color: #6200EE;
-
-}
-
-
-
-@media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-    .service-card {
-        padding: 25px;
-    }
-}
-
-@media (max-width: 480px) {
-    .services-grid {
-        grid-template-columns: 1fr; 
-    }
-
-    .service-card {
-        padding: 20px;
-    }
-}
-
-
 
 #contact form {
     display: flex;
@@ -415,7 +274,6 @@ nav a:hover {
 #contact form textarea {
     resize: vertical;
 }
-
 
 footer {
     background-color: #333;
@@ -436,28 +294,31 @@ footer {
         margin-bottom: 20px;
     }
 
-    nav {
-        display: none;
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
     }
 
-    header .container {
-        flex-direction: column;
-        align-items: center;
+    .skill-card {
+        padding: 20px;
     }
 
-    header .container .logo {
-        margin-bottom: 10px;
+    .skill-icon, .skill-icon-terminal {
+        font-size: 2rem;
+        width: 50px;
+        height: 50px;
     }
 
-    nav.show {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
+    .skill-card h3 {
+        font-size: 1rem;
     }
 
-    nav.show a {
-        margin: 10px 0;
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .service-card {
+        padding: 25px;
     }
 }
 
@@ -470,11 +331,40 @@ footer {
         font-size: 1rem;
     }
 
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+    }
+
     .skill-item {
         padding: 8px 16px;
     }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
 }
 
+@media (min-width: 669px) {
+    .logo {
+        width: 20%;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    nav {
+        width: 60%;
+        padding: 5px;
+    }
+
+    nav a {
+        margin-left: 20px;
+    }
+}
 
 .hero-content {
     animation: fadeIn 1s ease-in-out;
